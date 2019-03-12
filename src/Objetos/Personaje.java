@@ -59,10 +59,12 @@ public class Personaje {
     
     public void moverDerecha(){
         xref = xref+2;
+        System.out.println(xref);
     }
     
     public void moverIzquierda(){
         xref = xref-2;
+        System.out.println(xref);
     }
     
     public void moverArriba(){
