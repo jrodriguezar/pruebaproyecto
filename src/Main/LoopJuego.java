@@ -24,6 +24,8 @@ public class LoopJuego extends AnimationTimer {
 
     private Personaje ninja;
     private Image fondo;
+    private Image fondo2;
+    private Image fondo3;
     private Image esqueletoim;
     private Enemigosimple esqueleto;
     private Image ninjaImD;
@@ -47,6 +49,8 @@ public class LoopJuego extends AnimationTimer {
         this.esqueleto = new Enemigosimple(720, 478, 45, 57);
         this.heart = new Image("Images/heart.png");
         this.fondo = new Image("Images/CITY_MEGA sin fondo.png");
+        this.fondo2 = new Image("Images/Nivel2.png");
+        this.fondo3 = new Image("Images/Nivel3.png");
         this.ninjaImD = new Image("Images/rogue spritesheet calciumtrice.png");
         this.ninjaImI = new Image("Images/rogue spritesheet calciumtrice IZ.png");
         this.esqueletoim = new Image("Images/rpgcritter update formatted transparent.png");
@@ -138,10 +142,10 @@ public class LoopJuego extends AnimationTimer {
                 Shape pared2 = new Rectangle(804, 400, 2, 150);
 
                 Shape inter = SVGPath.intersect(sNinja, sEsqueleto);
-                
-                lapiz.drawImage(fondo, 736, 2400, 696, 320, 0, 0, 796, 520);
-                lapiz.drawImage(fondo, 736, 2068, 696, 268, 0, 89, 796, 438);
-                lapiz.drawImage(fondo, 736, 1621, 696, 235, 0, 204, 796, 330);
+                lapiz.drawImage(fondo2, 0,0, 769, 286, 0, 0, 796, 520);
+                //lapiz.drawImage(fondo, 736, 2400, 696, 320, 0, 0, 796, 520);
+                //lapiz.drawImage(fondo, 736, 2068, 696, 268, 0, 89, 796, 438);
+                //lapiz.drawImage(fondo, 736, 1621, 696, 235, 0, 204, 796, 330);
                 
                 Shape interseccion = SVGPath.intersect(sNinja, pared);
                 Shape interseccion2 = SVGPath.intersect(sNinja, pared2);
@@ -187,8 +191,10 @@ public class LoopJuego extends AnimationTimer {
 
                 Shape pared = new Rectangle(3, 400, 2, 150);
                 Shape pared2 = new Rectangle(804, 400, 2, 150);
-                lapiz.drawImage(fondo, 43, 2400, 696, 320, 0, 0, 796, 520);
-                lapiz.drawImage(fondo, 43, 1836, 696, 20, 0, 507, 796, 20);
+                
+                lapiz.drawImage(fondo3, 0, 0, 492, 233, 0, 0, 796, 520);
+                //lapiz.drawImage(fondo, 43, 2400, 696, 320, 0, 0, 796, 520);
+                //lapiz.drawImage(fondo, 43, 1836, 696, 20, 0, 507, 796, 20);
                 Shape interseccion = SVGPath.intersect(sNinja, pared);
                 Shape interseccion2 = SVGPath.intersect(sNinja, pared2);
                 //Activar paredes escenario 2
